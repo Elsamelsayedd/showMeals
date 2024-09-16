@@ -34,7 +34,7 @@ export default function Area() {
         <>
             <div className="container  my-3">
                 <div className="row row-gap-3">
-                    {Areas?.map((area, index) => <Link href={`https://showmeals.vercel.app/Area/${area.strArea}`} key={index} className="  col-lg-3 col-md-6  ">
+                    {Areas?.map((area, index) => <Link href={`/Area/${area.strArea}`} key={index} className="  col-lg-3 col-md-6  ">
 
 
                         <div >
