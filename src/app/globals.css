@@ -1,0 +1,58 @@
+.active{
+    color:#ffc107 !important;
+   
+}
+
+nav{
+    background-color: #232D3F;
+}
+
+body{
+    background-color: black;
+    
+}
+
+.text-meal
+{
+    transform: translateY(120%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.733) ;
+    transition: all 0.5s;
+    /* padding: 0 12px; */
+}
+
+.meal:hover .text-meal
+{
+transform: translateY(0%);
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+
+.modal {
+    --bs-modal-width: 100%;
+    --bs-modal-bg: black;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.my-6{
+    margin: 100px 0;
+}
+
+#searchByName::placeholder{
+    color: white;
+    opacity: 0.6;
+}
+#searchByLetter::placeholder{
+    color: white;
+    opacity: 0.6;
+}
