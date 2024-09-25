@@ -41,8 +41,19 @@ export default function MealOfArea() {
     }
 
     useEffect(() => {
-        getSubArea(MealOfArea)
-    }, [])
+        let isMounted = true; // Track whether the component is mounted
+
+        const fetchSubArea = async () => {
+            await getSubArea(MealOfArea);
+        };
+
+        fetchSubArea();
+
+        return () => {
+            isMounted = false; // Cleanup on unmount
+        };
+    }, [MealOfArea]); // Add MealOfArea as a dependency if it changes
+
 
 
     return (

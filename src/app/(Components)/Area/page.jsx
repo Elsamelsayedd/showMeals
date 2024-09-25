@@ -22,11 +22,30 @@ export default function Area() {
 
         }
     }
+
+
     useEffect(() => {
+        let isMounted = true; // Track whether the component is mounted
 
-        getAreas()
+        const fetchAreas = async () => {
+            try {
+                let { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`);
+                if (isMounted) {
+                    console.log(data.meals);
+                    setAreas(data.meals);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        };
 
-    }, [])
+        fetchAreas();
+
+        return () => {
+            isMounted = false; // Cleanup on unmount
+        };
+    }, []); // Empty dependency array means this runs only on mount
+
 
 
 
