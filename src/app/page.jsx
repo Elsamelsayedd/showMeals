@@ -3,7 +3,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import './globals.css'
-
+import { Router, useRouter } from "next/router";
 
 
 
@@ -15,7 +15,7 @@ export default function Home() {
   const [MealOfClick, setMealOfClick] = useState(null)
   async function getmeal() {
     try {
-      let { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
+      let { data } = await axios.get("https://www.themealdb.com/api/json/v1/1/search.php?s=")
 
       setMeals(data.meals)
       console.log(data.meals);
@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     getmeal()
 
-  }, [])
+  }, [Router.pathname])
 
 
 

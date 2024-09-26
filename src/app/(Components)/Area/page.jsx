@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import '../../globals.css'
 import Link from "next/link";
+import { Router } from "next/router";
 
 
 export default function Area() {
@@ -26,7 +27,7 @@ export default function Area() {
 
         getAreas()
 
-    }, [])
+    }, [Router.pathname])
 
 
 
