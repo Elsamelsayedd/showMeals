@@ -9,8 +9,9 @@ export default function Search() {
 
     async function searchByName(value) {
         try {
-            let { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`);
-            setMeals(data.meals || []);
+            const { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`);
+
+            setMeals(Array.isArray(data.meals) ? data.meals : []);
         } catch (error) {
             console.error('Error fetching meals by name:', error);
         }
@@ -18,8 +19,9 @@ export default function Search() {
 
     async function searchByLetter(value) {
         try {
-            let { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${value}`);
-            setMeals(data.meals || []);
+            const { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${value}`);
+
+            setMeals(Array.isArray(data.meals) ? data.meals : []);
         } catch (error) {
             console.error('Error fetching meals by letter:', error);
         }
@@ -37,7 +39,7 @@ export default function Search() {
                                     id="searchByName"
                                     type="text"
                                     placeholder="Search By Name"
-                                    className="w-100 form-control bg-transparent text-white"
+                                    className="w-100 form-control bg-transparent text-white mb-2"
                                 />
                             </div>
                             <div className="col-md-6">
@@ -81,7 +83,7 @@ export default function Search() {
                                 </div>
                             ))
                         ) : (
-                            <p className="text-white fs-4">No meals found. Please try again.</p>
+                            <p className="text-white fs-4"></p>
                         )}
                     </div>
                 </div>
