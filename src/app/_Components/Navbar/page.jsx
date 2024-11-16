@@ -50,7 +50,7 @@ export default function Navbar() {
             </ul>
             <div className="sideBar-copyrirht-icon d-flex">
               <div className="facebook-icon mx-2 text-white">
-                <a href="https://drive.google.com/file/d/1bziuj7b49GKhZXUSK8PtM357FMc0PDrf/view?usp=sharing" target="_blank" className="text-decoration-none text-white"><i className="fa-solid fa-envelope fa-2x text-warning" /></a>
+                <a href="https://drive.google.com/file/d/1jLwtMijBmu02qvOTBpzOd9E3jhThoS5f/view?usp=sharing" target="_blank" className="text-decoration-none text-white"><i className="fa-solid fa-envelope fa-2x text-warning" /></a>
               </div>
               <div className="twiter-icon mx-2 text-white">
                 <a href="https://www.linkedin.com/in/eslam-elsayed-7273a926b" target="_blank" className="text-decoration-none text-white"><i className="fa-brands fa-linkedin fa-2x text-warning" />
