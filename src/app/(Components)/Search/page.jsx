@@ -83,7 +83,7 @@ export default function Search() {
                                 </div>
                             ))
                         ) : (
-                            <p className="text-white fs-4"></p>
+                            <p className="text-white fs-4">  </p>
                         )}
                     </div>
                 </div>
