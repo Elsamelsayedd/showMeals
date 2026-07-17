@@ -3,7 +3,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import './globals.css'
-import { Router, useRouter } from "next/router";
 
 
 
@@ -31,7 +30,7 @@ export default function Home() {
   useEffect(() => {
     getmeal()
 
-  }, [Router.pathname])
+  }, [])
 
 
 

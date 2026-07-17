@@ -42,7 +42,7 @@ export default function MealOfArea() {
 
     useEffect(() => {
         getSubArea(MealOfArea)
-    }, [])
+    }, [MealOfArea])
 
 
     return (

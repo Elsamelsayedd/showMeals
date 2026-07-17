@@ -40,7 +40,7 @@ export default function SubCategories() {
 
     useEffect(() => {
         getSubCategories(subCategories)
-    }, [])
+    }, [subCategories])
 
 
     return (

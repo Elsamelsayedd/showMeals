@@ -26,7 +26,7 @@ export default function Ingredients() {
 
         getIngredients()
 
-    }, [])
+    }, [MealOfIngredients])
 
 
 
