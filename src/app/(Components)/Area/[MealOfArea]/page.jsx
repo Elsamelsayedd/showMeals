@@ -4,6 +4,7 @@ import axios from "axios"
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import '../../../globals.css'
+export const dynamic = "force-dynamic";
 
 export default function MealOfArea() {
 
@@ -13,7 +14,7 @@ export default function MealOfArea() {
 
 
 
-    async function getSubArea() {
+    async function getSubArea(MealOfArea) {
 
         try {
             let { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${MealOfArea}`)
