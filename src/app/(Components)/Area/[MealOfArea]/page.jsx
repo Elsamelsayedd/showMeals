@@ -13,7 +13,7 @@ export default function MealOfArea() {
 
 
 
-    async function getSubArea(MealOfArea) {
+    async function getSubArea() {
 
         try {
             let { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${MealOfArea}`)
