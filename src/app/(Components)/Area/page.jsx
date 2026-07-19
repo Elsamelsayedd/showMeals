@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import '../../globals.css'
 import Link from "next/link";
 import { Router } from "next/router";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 
 export default function Area() {
