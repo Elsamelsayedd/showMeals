@@ -4,6 +4,7 @@ import axios from "axios"
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import '../../../globals.css'
+export const dynamic = "force-dynamic";
 
 export default function SubCategories() {
 

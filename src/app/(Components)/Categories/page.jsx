@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import '../../globals.css'
 import Link from "next/link";
-
+export const dynamic = "force-dynamic";
 
 export default function Categories() {
 
