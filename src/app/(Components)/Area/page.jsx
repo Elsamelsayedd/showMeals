@@ -10,6 +10,7 @@ export const dynamic = "force-dynamic";
 
 
 
+
 export default function Area() {
 
     const [Areas, setAreas] = useState([])
